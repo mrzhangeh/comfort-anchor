@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>游戏晕动症（晕3D）循证整理 — 四周低显著性参照物是否可行</title>
+<style>
+  :root{
+    --ink:#1c1c1a; --muted:#5f5e5a; --hint:#888780; --line:#e2e0d8;
+    --bg:#faf9f5; --card:#ffffff; --tint:#f1efe8;
+    --green-bg:#EAF3DE; --green:#3B6D11; --green-line:#97C459;
+    --red-bg:#FCEBEB; --red:#A32D2D; --red-line:#F09595;
+    --amber-bg:#FAEEDA; --amber:#854F0B; --amber-line:#EF9F27;
+    --blue-bg:#E6F1FB; --blue:#185FA5; --blue-line:#85B7EB;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:56px 28px 96px}
+  header{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:36px}
+  .kicker{font-size:12px;letter-spacing:.12em;color:var(--hint);text-transform:uppercase;margin:0 0 12px}
+  h1{font-size:29px;line-height:1.35;font-weight:600;margin:0 0 12px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:14px;margin:0}
+  h2{font-size:20px;font-weight:600;margin:52px 0 16px;padding-top:8px;letter-spacing:-.01em}
+  h3{font-size:16px;font-weight:600;margin:28px 0 10px}
+  p{margin:0 0 14px}
+  ul,ol{margin:0 0 16px;padding-left:22px}
+  li{margin:0 0 8px}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue-line)}
+  a:hover{border-bottom-color:var(--blue)}
+  code{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:13px;
+    background:var(--tint);padding:1px 5px;border-radius:4px}
+  strong{font-weight:600}
+  .lead{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);
+    border-radius:10px;padding:22px 26px;margin:0 0 8px}
+  .lead p:last-child{margin-bottom:0}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 8px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .tile .n{font-size:12px;color:var(--hint);margin:0 0 6px}
+  .tile .v{font-size:19px;font-weight:600;line-height:1.4;margin:0 0 6px}
+  .tile .d{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+  .verdict{border-radius:10px;padding:18px 22px;margin:18px 0}
+  .v-yes{background:var(--green-bg);border:1px solid var(--green-line)}
+  .v-no{background:var(--red-bg);border:1px solid var(--red-line)}
+  .v-mid{background:var(--amber-bg);border:1px solid var(--amber-line)}
+  .verdict .lbl{font-size:12px;font-weight:600;letter-spacing:.06em;margin:0 0 6px}
+  .v-yes .lbl{color:var(--green)} .v-no .lbl{color:var(--red)} .v-mid .lbl{color:var(--amber)}
+  .verdict p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:13.5px;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th{background:var(--tint);text-align:left;font-weight:600;padding:11px 13px;border-bottom:1px solid var(--line)}
+  td{padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6}
+  tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .t-a{background:var(--green-bg);color:var(--green)}
+  .t-b{background:var(--amber-bg);color:var(--amber)}
+  .t-c{background:var(--red-bg);color:var(--red)}
+  .t-n{background:var(--tint);color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);background:var(--tint);border-radius:8px;padding:14px 18px;margin:16px 0}
+  .rule{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:6px 22px;margin:16px 0}
+  .rule ol{margin:12px 0 16px}
+  pre{background:#23231f;color:#eae8e0;border-radius:10px;padding:18px 20px;overflow-x:auto;
+    font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:12.5px;line-height:1.65;margin:14px 0 20px}
+  pre code{background:none;padding:0;color:inherit;font-size:inherit}
+  .refs{font-size:13px;color:var(--muted)}
+  .refs li{margin-bottom:11px}
+  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--hint)}
+  @media(max-width:680px){.wrap{padding:32px 18px 64px}.grid{grid-template-columns:1fr}h1{font-size:24px}
+    table{font-size:12.5px}th,td{padding:9px 10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">文献与网络资料整理 · 2026-11-04</p>
+  <h1>玩电脑游戏会晕：什么方案真正有效？<br>「画面四周放不明显的图标」可行吗</h1>
+  <p class="sub">面向「晕 3D / 游戏晕动症 / cybersickness / VIMS」的循证梳理，重点核查视觉参照框（rest frame）类方案的有效性与边界条件</p>
+</header>
+
+<div class="lead">
+  <p><strong>一句话结论：</strong>这个思路在学理上是成立的，学术名称叫「独立视觉背景 / 静止参照框（IVB / rest frame）」，并且被 2025 年一项纳入 97 项实验的元分析列为两类「一致有效」的视觉干预之一。但<strong>起作用的不是「图标」，而是「相对真实世界与重力静止、且与画面运动完全解耦的参照」</strong>；把参照物画成跟随镜头的 HUD 装饰、或让它随画面倾斜，就会失效甚至加重。对普通桌面显示器而言，它通常不是第一优先级——先关掉镜头晃动、调 FOV、锁帧率、开灯坐远，收益更大也更确定。</p>
+</div>
+
+<div class="grid">
+  <div class="tile"><p class="n">最强证据</p><p class="v">元分析 97 项实验</p><p class="d">Allison &amp; Palmisano (2025)：周边视野限制 + 独立视觉背景持续降低晕动症</p></div>
+  <div class="tile"><p class="n">关键反例</p><p class="v">预注册复制失败</p><p class="d">2024 年 n=32、检验效能 90.8% 的实验：虚拟鼻子无效，p = .917</p></div>
+  <div class="tile"><p class="n">场景差异</p><p class="v">桌面远轻于 VR</p><p class="d">SSQ 总分约 22.94（桌面）vs 74.30（头显）；呕吐在屏幕游戏里极罕见</p></div>
+</div>
+
+<h2>一、为什么会晕：三种互补的解释</h2>
+<p>主流解释是 <strong>感觉冲突理论</strong>（Reason &amp; Brand, 1975）：画面告诉大脑「你在奔跑、转身、加速」，内耳前庭和本体感觉却报告「你坐在椅子上一动不动」，两套信号对不上。另有 <strong>姿势不稳定理论</strong>（Riccio &amp; Stoffregen, 1991）——长期无法稳定姿势先于恶心出现；以及本文最相关的 <strong>静止参照框假说</strong>（Prothero 等）——致晕的不是运动线索冲突本身，而是大脑「选错了哪个东西算静止」。</p>
+<p>第三种解释直接推出了你的设想：如果给大脑一个明确、可信、与真实世界一致的「静止物」，它就不容易把满屏飞驰的画面误判为自身在运动。<strong>这就是四周参照物的理论依据。</strong></p>
+<p>元分析还确认了几类明确的加重因素：视觉振荡（画面来回晃）、多维视觉运动、模拟离轴旋转。这解释了为什么「镜头晃动 / 头部摆动 / 动态模糊」是最该先关掉的东西。</p>
+
+<h2>二、先分清场景：普通显示器 ≠ VR 头显</h2>
+<p>这一点会直接改变方案优先级。绝大多数「四周参照框」的实验是在头戴显示器里做的，因为头显把整个视野占满、抹掉了真实房间的参照；而普通屏幕四周本来就看得见墙、桌面、显示器边框——<strong>那已经是天然的独立视觉背景</strong>。</p>
+<table>
+  <tr><th style="width:26%">对比</th><th>桌面显示器</th><th>VR 头显</th></tr>
+  <tr><td>症状严重度</td><td>明显较轻。Yildirim (2020) 两实验：头显症状显著更重；一篇 2023 系统综述引述 SSQ 总分约 22.94 vs 74.30</td><td>显著更重。Dennison 等 (2016) 同一模拟：头显组 20 人中 11 人难受至退出，桌面组 0 人</td></tr>
+  <tr><td>真实环境参照</td><td>天然存在（房间、边框、背光）</td><td>被完全遮挡，必须人造</td></tr>
+  <tr><td>呕吐</td><td>极罕见</td><td>连头显场景下也被综述列为「罕见」，更常见的是恶心、定向障碍、眼疲劳、头晕、出汗</td></tr>
+  <tr><td>人工参照框价值</td><td>边际收益较小；仅在全屏 + 关灯 + 大屏/超宽屏 + 近距离、屏幕吃掉大部分视野时才明显</td><td>价值明确，是主流「舒适度选项」之一</td></tr>
+</table>
+<div class="note"><strong>推论：</strong>在桌面游戏里，与其在游戏内画一圈图标，不如先「保住」已有的天然参照——开一盏灯或显示器背光、别在全黑房间玩、用窗口化或把屏幕往后挪、让边框和桌面进入余光。这些对应 Prothero 1999 里最有效的 see-through 条件，且零开发成本。</div>
+
+<h2>三、核心判定：四周低显著性参照物，可行但有硬条件</h2>
+
+<div class="verdict v-yes">
+  <p class="lbl">可行的部分</p>
+  <p>低显著性本身不是障碍，反而是优点。Prothero 等 (1999) 的实验中，被试主观评价「主画面内容明显比背景参照更显眼」，但参照背景仍带来<strong>大效应</strong>的晕动症与共济失调下降。Wienrich 等 (2022) 也提出参照框「不必显著才有效」。Fernandes &amp; Feiner (2016) 的细微动态视野收窄，多数被试根本没察觉，却显著更舒适、停留更久且不损临场感。</p>
+</div>
+
+<div class="verdict v-no">
+  <p class="lbl">最容易踩的坑</p>
+  <p>参照物<strong>必须屏幕空间固定、与真实重力对齐</strong>，绝不能随镜头平移、旋转、俯仰或一起倾斜。若把它挂到 3D 世界里，它会变成额外光流，反而加重冲突。2026 年 IEEE TVCG 的眼动实验发现：当画面倾斜制造视觉-前庭冲突时，<strong>只有与重力竖直对齐的参照框</strong>抑制了症状累积，跟着倾斜画面一起倾斜的参照框无效。2024 年预注册复制研究也给出机制解释：随头部移动的参照（虚拟鼻子）无法区分「真实转头」与「模拟旋转」，因此不能解决冲突。</p>
+</div>
+
+<div class="verdict v-mid">
+  <p class="lbl">证据并不一边倒</p>
+  <p>2021 年 Shi 等在 VR 竞速游戏（n=32）比较固定准星参照、动态 FOV 收窄、景深模糊，三种方法在晕动症、临场感、负荷上<strong>均无显著差异</strong>；Luks &amp; Liarokapis (2019) 的驾驶舱参照也未优于可见路径；Ang &amp; Quarles (2023) 的系统综述把多项参照框研究列入「结果不显著」。所以应当把它定位为「可选的增强项」，不是主防线。</p>
+</div>
+
+<h3>证据分野：为什么有的研究有效、有的无效</h3>
+<table>
+  <tr><th style="width:22%">类型</th><th style="width:30%">代表研究</th><th>结论</th></tr>
+  <tr><td><strong>环境固定参照</strong><br><span class="tag t-a">有效</span></td><td>Prothero 1999（真实房间可见）、Cao 2018（金属网格）、Nie 2025（周边「传送」参照）、Allison 2025 元分析</td><td>相对真实世界/重力静止，能区分真实头部运动与虚拟运动 → 一致降低症状</td></tr>
+  <tr><td><strong>周边视野限制</strong><br><span class="tag t-a">有效</span></td><td>Fernandes &amp; Feiner 2016、Allison 2025 元分析</td><td>运动时用软边暗角收窄周边光流；细微版本多数人察觉不到</td></tr>
+  <tr><td><strong>头部固定参照</strong><br><span class="tag t-c">多为无效</span></td><td>2024 预注册复制（虚拟鼻子）、Shi 2021（固定准星）、Luks 2019（驾驶舱）</td><td>随头/相机移动，与头显屏幕边框信息冗余 → 多为 null result</td></tr>
+  <tr><td><strong>颗粒化参照框</strong><br><span class="tag t-b">尚未验证减晕</span></td><td>Cao, Grandi &amp; Kopper 2021</td><td>最贴近你设想的实现，但论文只测了视觉搜索表现，<strong>未测量 VIMS</strong>，作者明说留待未来工作</td></tr>
+</table>
+
+<h3>关键原始证据（含样本与结果）</h3>
+<table>
+  <tr><th style="width:30%">研究</th><th style="width:16%">样本 / 设计</th><th>主要结果</th></tr>
+  <tr><td>Prothero, Draper, Furness, Parker &amp; Wells (1999)<br><em>Aviat Space Environ Med</em> 70(3):277–283</td><td>2 个实验，HMD 圆形 vection 刺激 3–4.5 分钟，see-through（真实房间作 IVB）vs 全遮挡</td><td>实验 1 晕动症与共济失调呈<strong>大效应</strong>下降；被试认为主内容远比 IVB 显眼，仍有效</td></tr>
+  <tr><td>Cao, Jerald &amp; Kopper (2018)<br>IEEE VR</td><td>2 项多日被试内研究，合计 44 人，虚拟行进 + 静态/动态金属网格参照</td><td>带参照框时，被试因不适而停止前能走过<strong>更多路径点</strong>；静态参照框还带来更高的实时舒适度</td></tr>
+  <tr><td>Fernandes &amp; Feiner (2016)<br>IEEE 3DUI（最佳论文）</td><td>n=30，多日交叉设计，软边圆形动态 FOV 遮罩，两档显著性</td><td>开启时更舒适、停留在虚拟环境中更久，不降临场感；更细微那档多数人<strong>未察觉</strong>，察觉者全部希望以后保留</td></tr>
+  <tr><td>Nie 等 (2025)<br>IEEE VR / TVCG</td><td>n=90 组间：周边「传送」参照框 vs 黑色 FOV 遮罩 vs 无干预</td><td>周边参照<strong>显著降低不适</strong>、延长可沉浸时长；论文称是首个显著优于常规 FOV 遮罩的软件方案</td></tr>
+  <tr><td>Allison &amp; Palmisano (2025)<br><em>Multisensory Research</em></td><td>4622 条记录 → 97 项同行评审实验，随机效应元分析，效应量以 SMD 合成</td><td><strong>周边视野限制</strong>与<strong>独立视觉背景</strong>一致关联症状下降；视觉振荡、多维运动、离轴旋转则加重</td></tr>
+  <tr><td>Shi 等 (2021)<br>PACMCGIT 4(1)</td><td>n=32 混合设计，VR 竞速，两种控制程度</td><td>固定准星 / FOV 收窄 / 景深模糊在晕动症、临场感、负荷上<strong>无显著差异</strong>；但准星不造成信息损失</td></tr>
+  <tr><td>Wienrich, Obremski &amp; Israel (2022)<br><em>Entertainment Computing</em></td><td>2 个 VR 游戏实验，虚拟鼻子 + 习惯化</td><td>习惯化显著减晕；低保真鼻子无效、改进版有效；显著性（是否被察觉）无影响</td></tr>
+  <tr><td>预注册复制 (2024)<br><em>Cognitive Research</em></td><td>n=32 被试内，预设功效 90.8%，FMS + SSQ，OSF 预注册</td><td><strong>复制失败</strong>：FMS 7.438 vs 7.531，p=.917，dz=−0.019；SSQ p=.993。贝叶斯上界提示即便有效也不太可能超过约 26% 改善（控制顺序效应后约 19.8%）</td></tr>
+  <tr><td>Kim 等 (2026)<br>IEEE TVCG（KRAFTON 参与）</td><td>2 实验，虚拟过山车 + 眼动，玩家固定参照框</td><td>参照框降低总体晕动症且不损临场感/vection，并使注视更集中；但<strong>只有与重力竖直对齐</strong>的参照框能抑制累积症状</td></tr>
+</table>
+
+<h2>四、按证据强度排序：什么最值得先做</h2>
+<div class="rule">
+<ol>
+  <li><strong>关掉人为画面运动</strong>（最稳、零成本）：头部摆动 head bob、镜头晃动 camera shake、武器摇摆 weapon sway、动态模糊 motion blur 全部归零；降低鼠标/摇杆镜头灵敏度、关闭鼠标加速度。微软 Xbox 无障碍指南 XAG 117 也把这类效果列为必须可关闭项。此条属行业共识 + 机制推论，虽少有单独 RCT，但风险为零、收益最直观。</li>
+  <li><strong>把 FOV 调到与屏幕距离匹配</strong>：桌面 16:9 通常 90–100° 水平 FOV 起步，每次只调 5°、玩 20 分钟观察；过窄会有「望远镜感」，过宽（120°+）边缘透视拉伸会自己诱发不适。Lin 等 (2002) 在驾驶模拟中发现晕动症随 FOV 增大而上升，约 140° 后趋于饱和。</li>
+  <li><strong>帧率稳定优先于帧率高</strong>：锁定 60 fps 优于在 45–120 之间波动；开垂直同步或限帧，避免微卡顿与画面撕裂。</li>
+  <li><strong>保住真实环境参照</strong>：开灯 / 显示器背光、坐远（约为屏幕对角线的 1.5–2.5 倍）、窗口化、让边框和桌面进入余光。避免「全屏 + 黑屋 + 超宽屏贴脸」。</li>
+  <li><strong>周边视野限制 / 静止参照框</strong>（元分析支持的两类视觉干预）：运动时出现低对比度暗角，或稳定的四边参照。可作为可选的「舒适模式」。</li>
+  <li><strong>渐进习惯化</strong>：每日短时（10–15 分钟）且在出现症状前就结束，逐日延长；多日重复暴露后症状显著下降，即便撤掉保护性视野限制仍保留效果。这是少数能「治本」的非药物手段。</li>
+  <li><strong>辅助项</strong>：小风扇吹面部（有 VR 研究支持可变气流降低症状）、通风降温、避免过饱或空腹；生姜 1–2 g 提前约 30 分钟（4 项 RCT / 469 人的 2026 系统综述中 3 项显著减少恶心呕吐，但针对的是<strong>真实运动病</strong>，外推到屏幕游戏需打折）。</li>
+  <li><strong>不建议作为主力</strong>：东莨菪碱贴片在模拟器晕动症研究中表现不佳；抗组胺（茶苯海明、美克洛嗪）会嗜睡，可能叠加定向障碍；指压腕带证据薄弱；单纯中央准星在对照实验中未显出减晕优势。</li>
+</ol>
+</div>
+
+<h2>五、关于「呕吐」：一个需要纠正的目标</h2>
+<p>所有视觉方案（包括四周参照物）都是<strong>预防与延缓症状累积</strong>，不是对已发作恶心/呕吐的治疗。一旦开始发闷、面部发热、胃部不适、出冷汗，继续硬撑不会「练出来」，只会让症状更重、恢复更久，并可能形成条件性预期。</p>
+<ul>
+  <li><strong>急性处理：</strong>立刻停止游戏 → 闭眼静坐或注视远处静止物 → 通风降温、小口补水 → 半卧休息。多数人在 10–30 分钟内明显缓解。</li>
+  <li><strong>频率认知：</strong>综述指出即便在 HMD VR 中，真正呕吐也属罕见；屏幕游戏更多是恶心、头晕、眼疲劳、定向障碍。如果频繁真的吐，或平时乘车乘船也频繁发作，应当去耳鼻喉/神经内科做前庭与偏头痛相关评估，而不是只调游戏设置。</li>
+  <li><strong>红旗症状：</strong>恶心呕吐持续超过 2 小时不缓解、伴剧烈头痛、视物模糊、肢体麻木或肢体无力、意识改变 → 及时就医。</li>
+</ul>
+<p class="note">以上为通用健康建议，非临床诊疗意见；用药请遵医嘱。</p>
+
+<h2>六、如果要把「四周参照物」做进产品：可直接用的参数</h2>
+<p>最接近你设想的已发表实现是 <strong>Granulated Rest Frames（颗粒化静止参照框）</strong>（Cao, Grandi &amp; Kopper, 2021）：不是四个图标，而是在周边视野铺一层随机分布的黑色小圆点，中央保留软边透明区，从而在提供稳定参照的同时不完全挡住周边信息。n=20 的实验中，<code>4°颗粒 / 25%密度</code> 组合在搜索时间、准确率、头部转动三项上都优于实心 FOV 遮罩；15/20 的被试更偏好它。但务必注意：<strong>该论文没有测量晕动症</strong>，作者明确说减晕效果有待验证。</p>
+<table>
+  <tr><th style="width:24%">参数</th><th>建议值</th><th>依据 / 说明</th></tr>
+  <tr><td>坐标系</td><td>屏幕空间 / 2D 正交 HUD，独立于 3D 相机</td><td>决定性条件。禁止挂在世界坐标里随镜头移动</td></tr>
+  <tr><td>姿态</td><td>永远水平/垂直，与屏幕边框及真实重力对齐</td><td>Kim 等 2026：与倾斜画面对齐的参照框无效</td></tr>
+  <tr><td>中央透明区</td><td>内圈约 36° 完全透明，向外到约 80° 渐强</td><td>Cao 2021 的 IFOV/OFOV；保证准星与主要信息不被遮挡</td></tr>
+  <tr><td>颗粒尺寸 / 密度</td><td>单颗粒约 1–4° 视角，密度约 25%，随机且互不重叠</td><td>Cao 2021 的 <code>4S_25%</code> 为综合最优；高密度反被多数被试反感</td></tr>
+  <tr><td>对比度</td><td>不透明度约 5–15%，亮度对比尽量低，用户可调</td><td>Prothero 1999 / Wienrich 2022：低显著性不妨碍起效；US 6,497,649 也设计了可感知度调节</td></tr>
+  <tr><td>动效</td><td>静止。绝不做闪烁、呼吸、漂移、脉冲</td><td>元分析：视觉振荡是明确加重因素</td></tr>
+  <tr><td>动态联动（可选）</td><td>仅在镜头快速移动/转向时轻微增强边缘强度，随后平滑恢复</td><td>Fernandes 2016、Cao 2018 的动态版本；恢复要慢，避免自身成为可见变化</td></tr>
+  <tr><td>交互</td><td>默认关闭，提供开关 + 强度滑杆</td><td>个体差异大；Nie 2025 与 Shi 2021 都提示最优参数因人而异，部分人会觉得分心</td></tr>
+</table>
+<p><strong>一个反直觉的细节：</strong>Prothero 等人的美国专利 US 6,497,649（2002，针对普通 HDTV 显示的 earth-fixed IVB 网格）里提到，当时的实验数据提示<strong>放在纯周边的 IVB 不如位置更靠中央的有效</strong>。因此如果只贴四个角落的小图标，可能太边缘、太稀疏而不足；更稳妥是「细边框 + 稀疏点阵 + 少量接近内圈的低对比度水平参考线」，但仍不侵入准星区。该专利也正是「显示器边缘显示不移动不旋转的横竖线」这一构想的早期来源——不过<strong>专利是构想，不等于有效性证明</strong>；商业实现前请自行核查其法律状态。</p>
+
+<h3>纯前端叠加层示意（网页 / 小程序 WebView 可直接用）</h3>
+<pre><code>&lt;div class="comfort-frame" aria-hidden="true"&gt;&lt;/div&gt;
+
+&lt;style&gt;
+  .comfort-frame{
+    position:absolute; inset:0; pointer-events:none; z-index:50;
+    /* 静止细边框：与屏幕对齐，永不随画面变换 */
+    border:1px solid rgba(0,0,0,.07);
+    box-shadow: inset 0 0 0 10px rgba(0,0,0,.02);
+  }
+  /* 可选：运动时才轻微收窄周边，用 CSS 变量由 JS 驱动 */
+  .comfort-frame[data-moving="true"]{
+    box-shadow: inset 0 0 90px 30px rgba(0,0,0,.10);
+  }
+  /* 若做颗粒化：用静态 SVG/背景图，不要 CSS 动画 */
+&lt;/style&gt;</code></pre>
+<p>关键实现约束：叠加层放在 3D canvas <strong>之外</strong>的兄弟节点，永不被相机的 transform / post-processing 影响；暗角强度变化用 200–400 ms 平滑过渡，且只在场景确实在移动时触发。</p>
+
+<h3>自测协议（避免被「习惯化」骗出假阳性）</h3>
+<ol>
+  <li>被试内交叉设计，至少 20–30 人；条件顺序做完全平衡（2024 复制研究显示第一场的 FMS 显著高于第二场，η²=.419）。</li>
+  <li>每个条件暴露等长（如 12 分钟），每 2 分钟记录一次 <strong>FMS</strong>（0–20 口头评分），前后各填一次 <strong>SSQ</strong>，并记录「因不适提前退出」的时间。</li>
+  <li>同时记录临场感与任务表现，确认减晕不是靠「把画面挡住让游戏变无聊」换来的。</li>
+  <li>跨多日重复，把习惯化作为协变量；报告效应量与置信区间，而不是只报 p 值。</li>
+</ol>
+
+<h2>七、证据局限</h2>
+<ul>
+  <li>绝大多数随机对照实验在 <strong>HMD / VR</strong> 环境完成，直接外推到普通桌面显示器需谨慎；桌面专用证据明显稀薄。</li>
+  <li>样本普遍偏小（20–44 人），任务与刺激差异大，发表偏倚与「低功效导致效应量虚高」是已知问题——2024 年预注册复制正是因此失败的典型。</li>
+  <li>个体易感性差异极大（晕车史、偏头痛、前庭敏感度、性别与年龄、既往 VR 经验），几乎不存在一刀切的最优参数。</li>
+  <li>元分析只纳入同行评审的低层视觉因素，未涵盖延迟、内容语义、身体耦合运动等高阶因素。</li>
+  <li>本报告中的行业/科普条目（XAG 117、设置建议、急性处理）为机制推论与通用建议，证据等级低于前述对照实验与元分析，已在文中标注。</li>
+</ul>
+
+<h2>八、主要参考文献</h2>
+<ol class="refs">
+  <li>Allison RS, Palmisano S. <em>Visual Factors in Cybersickness: A Literature Survey and Meta-Analysis.</em> Multisensory Research, 2025. DOI <a href="https://doi.org/10.1163/22134808-bja10181">10.1163/22134808-bja10181</a>; PMID 41389808.</li>
+  <li>Prothero JD, Draper MH, Furness TA, Parker DE, Wells MJ. <em>The use of an independent visual background to reduce simulator side-effects.</em> Aviat Space Environ Med, 1999;70(3):277–283. <a href="https://pubmed.ncbi.nlm.nih.gov/10102741/">PMID 10102741</a>.</li>
+  <li>Cao Z, Jerald J, Kopper R. <em>Visually-Induced Motion Sickness Reduction via Static and Dynamic Rest Frames.</em> IEEE VR 2018:105–112. DOI <a href="https://doi.org/10.1109/VR.2018.8446210">10.1109/VR.2018.8446210</a>.</li>
+  <li>Cao Z, Grandi J, Kopper R. <em>Granulated Rest Frames Outperform Field of View Restrictors on Visual Search Performance.</em> Frontiers in Virtual Reality, 2021;2:604889. DOI <a href="https://doi.org/10.3389/frvir.2021.604889">10.3389/frvir.2021.604889</a>.</li>
+  <li>Fernandes AS, Feiner SK. <em>Combating VR sickness through subtle dynamic field-of-view modification.</em> IEEE 3DUI 2016（最佳论文）.</li>
+  <li>Nie T, Pospick CH, Cantory V, et al. <em>Peripheral Teleportation: A Rest Frame Design to Mitigate Cybersickness During Virtual Locomotion.</em> IEEE TVCG, 2025. DOI <a href="https://doi.org/10.1109/TVCG.2025.3549568">10.1109/TVCG.2025.3549568</a>; <a href="https://arxiv.org/abs/2502.15227">arXiv:2502.15227</a>; PMID 40063443.</li>
+  <li>Shi R, Liang H-N, Wu Y, Yu D, Xu W. <em>Virtual Reality Sickness Mitigation Methods: A Comparative Study in a Racing Game.</em> PACMCGIT, 2021;4(1). DOI <a href="https://doi.org/10.1145/3451255">10.1145/3451255</a>; <a href="https://arxiv.org/abs/2103.05200">arXiv:2103.05200</a>.</li>
+  <li>Wienrich C, Obremski D, Israel JH. <em>Repeated experience or a virtual nose to reduce simulator sickness?</em> Entertainment Computing, 2022. DOI <a href="https://doi.org/10.1016/j.entcom.2022.100514">10.1016/j.entcom.2022.100514</a>.</li>
+  <li><em>Preregistered test of whether a virtual nose reduces cybersickness.</em> Cognitive Research: Principles and Implications, 2024. DOI <a href="https://doi.org/10.1186/s41235-024-00593-3">10.1186/s41235-024-00593-3</a>.</li>
+  <li>Kim J, Park S, Park C, Lee S-U, Kim GJ. <em>Cybersickness Reduction Effects of Visual and Vestibular Player-Fixed Rest Frames.</em> IEEE TVCG, 2026. DOI <a href="https://doi.org/10.1109/TVCG.2026.3747491">10.1109/TVCG.2026.3747491</a>.</li>
+  <li>Ang S, Quarles J. <em>Reduction of cybersickness in head mounted displays use: A systematic review and taxonomy of current strategies.</em> Frontiers in Virtual Reality, 2023;4:1027552. DOI <a href="https://doi.org/10.3389/frvir.2023.1027552">10.3389/frvir.2023.1027552</a>.</li>
+  <li>Yildirim C. <em>Don't make me sick: investigating the incidence of cybersickness in commercial virtual reality headsets.</em> Virtual Reality, 2020;24(2):231–239. DOI <a href="https://doi.org/10.1007/s10055-019-00401-0">10.1007/s10055-019-00401-0</a>.</li>
+  <li>Palmisano S, Kim J, et al. <em>Cybersickness in Head-Mounted Displays Is Caused by Differences in the User's Virtual and Physical Head Pose.</em> Frontiers in Virtual Reality, 2020. DOI <a href="https://doi.org/10.3389/frvir.2020.587698">10.3389/frvir.2020.587698</a>.</li>
+  <li>Lin JJ-W, Duh HBL, Parker DE, Abi-Rached H, Furness TA. <em>Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment.</em> IEEE VR 2002:164–171. DOI <a href="https://doi.org/10.1109/VR.2002.996519">10.1109/VR.2002.996519</a>.</li>
+  <li>Sundaram AM, et al. <em>From ancient roots to modern routes: a systematic review of ginger's anti-motion sickness efficacy in randomized clinical trials and animal studies.</em> 2026. DOI <a href="https://doi.org/10.2478/aspr-2026-0001">10.2478/aspr-2026-0001</a>.</li>
+  <li>Prothero JD, et al. <em>Alleviating motion, simulator, and virtual environmental sickness by presenting visual scene components matched to inner ear vestibular sensations.</em> US Patent 6,497,649, 2002.</li>
+</ol>
+
+<h2>附：2026-11-05 补充核查（动态参照框 / 图形选择 / 遮挡）</h2>
+
+<div class="verdict v-mid">
+  <p class="lbl">对上一版结论的一处修正</p>
+  <p>上一版把「绝对静止、无动画」写成无例外原则，并顺带把 Cao 2018 标题里的 <em>dynamic rest frames</em> 理解为「可移动的参照物」。核对原文后需修正：<strong>该文的 dynamic 指「不透明度随视觉运动强度淡入淡出」，金属网本身始终相对真实世界静止、不随头部或虚拟运动移动</strong>。而且 Ang &amp; Quarles 2023 系统综述明确指出：<em>Only the static variant was shown to reduce cybersickness</em>；动态版虽让被试多走了更多航点，但未验证与静态版等效。所以「动态」不等于「位置移动」，且证据仍偏向静态。</p>
+</div>
+
+<h3>1. 让参照物「随鼠标 / 手柄轻微移动」是否更好？</h3>
+<table>
+  <tr><th>做法</th><th>证据</th><th>判断</th></tr>
+  <tr><td><strong>屏幕空间完全静止</strong>（与真实房间对齐）</td><td>Prothero 1999；Cao 2018 静态版；Allison &amp; Palmisano 2025 元分析</td><td><span class="tag t-a">默认，证据最强</span></td></tr>
+  <tr><td><strong>跟随用户物理头部运动</strong>，同时移除虚拟镜头产生的连续周边光流</td><td>Nie et al. 2025, IEEE TVCG, N=90：显著优于黑色 FOV 遮罩与对照。原文强调 RF 相机的 local transform 每帧匹配 <em>physical motion</em>，并用离散 teleport / snap turn 刻意避免 continuous virtual motion</td><td><span class="tag t-a">VR 有效</span>；桌面屏幕本身物理静止，静态叠加层已等价满足</td></tr>
+  <tr><td><strong>跟随虚拟镜头 / 鼠标同向移动</strong></td><td>Buhler et al. 2018「Circle effect」把静止相机视图混入周边却未传送，引入 undesirable optical flow，N=18 无显著差异；同组的「以 2 倍速度远离用户的光球」亦无显著效果</td><td><span class="tag t-c">无证据，可能加重</span></td></tr>
+  <tr><td><strong>不透明度随运动强度变化</strong>（Cao 2018 的 dynamic）</td><td>两项多日被试内研究共 44 人；静态或动态 RF 都能让人多走航点，但只有静态版在实时舒适度上显著优于无 RF；系统综述认为动态版有效性未被确认</td><td><span class="tag t-b">部分支持</span>，可作为减少常驻遮挡的折中</td></tr>
+  <tr><td><strong>反向光流</strong>：叠加与画面光流方向相反的短线段</td><td>Park SH, Han B, Kim GJ. CHI 2022：显著降低 VIMS / vection；但只有高对比度时才出现明显分心与临场感下降</td><td><span class="tag t-b">有正向证据</span>，需低对比、小幅度，桌面外推未验证</td></tr>
+</table>
+<p class="note">结论：<strong>关键不是「动不动」，而是「跟谁动、往哪动」</strong>。桌面玩家身体物理静止，鼠标/手柄驱动的是虚拟镜头；把参照物绑到虚拟镜头上等于引入额外光流。真正被证明有效的区分是「与物理运动耦合」vs「与虚拟运动耦合」，以及「与画面光流反向」vs「同向」。Dot[9] 把 Counter-Motion / Motion Echo 列在 roadmap 并注明「beyond 1.0」，MotionAnchor 有 motion-responsive 插件，二者均未提供有效性验证。</p>
+
+<h3>2. 图形选择与遮挡：为什么应该给多种形状</h3>
+<ul>
+  <li><strong>Baek M, Kim H. <em>Virtual Reality</em> 2025;29:41</strong>（DOI <a href="https://doi.org/10.1007/s10055-025-01116-1">10.1007/s10055-025-01116-1</a>）：mesh 状静止参照框，中央 120°×60° 保持无网格；实验一 N=18 发现<strong>密度变化对晕动症与临场感均无显著影响</strong>，不透明度 0.4 与 1.0 都优于 0.7；实验二 N=12 支持「最小遮挡 RF」相对无 RF 降低不适（NRF1→MRF2 的 DS 5.1→2.1），但作者明确提示 <em>order effect</em>，SSQ 与临场感主效应均不显著。<strong>实践含义：在效果相近时应选遮挡最少的配置，而不是把点铺密。</strong></li>
+  <li><strong>De Vries, Smeets, Bos. 2025</strong>（第 2 届 Motion Sickness 会议摘要）：head-fixed 与 earth-fixed 参照框的症状水平相似，但<strong>被试主观认为「更稳定」的那一帧对应更大的症状下降</strong>；作者结论是参照框不是可泛化的通用技术，效果依赖个体对「哪个是静止的」的判断。这正是提供多种形状、让用户自选的直接依据。</li>
+  <li><strong>形状谱系</strong>：Cao 2018 的 see-through 金属网；Chang et al. 2013（n=22, EEG）用<strong>两横两竖白线</strong>把画面分成九宫格；Duh et al. 的「刚好可察觉」低亮度 IVB 在低频场景运动中减少姿势扰动；Lin et al. 报告由云/树等<strong>有意义物体构成的自然 IVB</strong> 在恶心评分上优于密集网格 IVB；Nguyen-Vo 2018 的 wireframe CAVE 亦显著。Steady 提供 Frame / Dome / Grid，Dot[9] 提供边缘点、side-tick / 分段 / 整线三种地平线与柔和暗角。</li>
+  <li><strong>遮挡是可量化的</strong>：按有效墨迹（alpha ≥ 16/255）计，静锚 v2 默认档覆盖 <strong>0.44%</strong> 像素、平均 alpha 0.120/255，中央完全透明；v1 的密集实心点正是「画面发灰」的主因。四角避让区可保护小地图 / 技能栏。</li>
+</ul>
+
+<h3>3. 本次新增可引用文献</h3>
+<ol class="refs">
+  <li>Cao Z, Jerald J, Kopper R. IEEE VR 2018, pp.105–112 — 原文摘要已核对：dynamic = opacity changes in response to visually perceived motion；rest frames「remain fixed in relation to the real world and do not move as the user virtually moves」。</li>
+  <li>Baek M, Kim H. <em>Investigating the effects of density and opacity of rest frames for VR sickness reduction.</em> Virtual Reality 29:41, 2025. DOI 10.1007/s10055-025-01116-1。</li>
+  <li>Park SH, Han B, Kim GJ. <em>Mixing in Reverse Optical Flow to Mitigate Vection and Simulation Sickness in Virtual Reality.</em> CHI 2022. DOI <a href="https://doi.org/10.1145/3491102.3501847">10.1145/3491102.3501847</a>。</li>
+  <li>Nie T, et al. IEEE TVCG 2025 — <a href="https://arxiv.org/html/2502.15227v1">全文机制章节</a>：RF 相机跟随 physical motion，虚拟 locomotion 仅通过离散 teleport / snap turn 进入，刻意消除 continuous optical flow。</li>
+  <li>Ang S, Quarles J. Frontiers in Virtual Reality 2023;4:1027552 — 系统综述「Companion objects」章节对 Cao 2018 静态/动态版的判定。</li>
+  <li>De Vries K, Smeets J, Bos J. <em>The effect of rest frames on cybersickness.</em> Eur J Transl Myol 2025;35(s1):14486. DOI <a href="https://doi.org/10.4081/ejtm.2025.14486">10.4081/ejtm.2025.14486</a>。</li>
+  <li>Chang EH, et al. <em>Effects of rest frames on cybersickness and oscillatory brain activity.</em> IEEE IWW-BCI 2013. DOI 10.1109/IWW-BCI.2013.6506631。</li>
+</ol>
+
+<footer>
+  整理时间 2026-11-04；补充核查 2026-11-05 · 资料来自 PubMed / IEEE / ACM / Frontiers / arXiv / Springer 及公开行业指南与中文科普。<br>
+  文中标注为「行业共识 / 通用建议」的条目证据等级低于随机对照实验与元分析；涉及用药与持续症状请咨询医生。
+</footer>
+
+</div>
+</body>
+</html>

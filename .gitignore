@@ -1,0 +1,34 @@
+# ---------- 构建产物（exe 通过 GitHub Releases 分发，不入库） ----------
+build/
+dist/
+*.spec
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---------- 本机自检输出 ----------
+check_*.txt
+ui_*.txt
+*_result.txt
+*.log
+
+# ---------- 运行时用户配置 / 崩溃日志 ----------
+settings.json
+crash.log
+
+# ---------- 编辑器与系统 ----------
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# ---------- 凭证兜底（任何情况下都不要提交） ----------
+.env
+*.token
+*.pem
+github.txt
+*_secret*

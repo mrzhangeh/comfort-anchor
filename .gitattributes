@@ -1,0 +1,12 @@
+* text=auto
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.html  text eol=lf
+*.txt   text eol=lf
+*.bat   text eol=crlf
+*.png   binary
+*.exe   binary
+
+# 第三方许可证全文逐字节保留，不做换行归一化
+docs/third-party/** -text
